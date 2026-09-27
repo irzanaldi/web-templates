@@ -1,0 +1,36 @@
+# ===== Secrets: NEVER commit real environment files =====
+.env
+**/.env
+.env.*
+**/.env.*
+# Keep example/sample templates
+!.env.example
+!**/.env.example
+!.env.sample
+!**/.env.sample
+
+# ===== Dependencies =====
+vendor/
+**/vendor/
+node_modules/
+**/node_modules/
+
+# ===== Keys / certificates =====
+storage/*.key
+**/storage/*.key
+*.pem
+*.key
+
+# ===== OS / editor / logs / build output =====
+.DS_Store
+**/.DS_Store
+*.log
+build/
+dist/
+
+# ===== Nested standalone repo (user's own 'web-school' project) =====
+# This subfolder is its own Git repository with its own remote
+# (github.com/irzanaldi/web-school) and its own tracked .env.
+# Excluded wholesale from this template pack to keep it independent
+# and to guarantee its secrets cannot leak into this repo.
+template-rubick-midone-livewire/
